@@ -1,6 +1,6 @@
 import 'cache_db_base_model.dart';
 
-class FlutterCacheDBModel extends CacheDBBaseModel {
+class FlutterCacheDBModel extends FlutterCacheDBBaseModel {
   static String table = 'flutter_cache_data';
 
   String key;

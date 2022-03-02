@@ -49,13 +49,13 @@ abstract class FlutterCacheDBHelper {
 
   static Future<int> insert(
     String table,
-    CacheDBBaseModel model,
+    FlutterCacheDBBaseModel model,
   ) async =>
       await _db!.insert(table, model.toMap());
 
   static Future<int> update(
     String table,
-    CacheDBBaseModel model, {
+    FlutterCacheDBBaseModel model, {
     String? columnName,
   }) async =>
       await _db!.update(
@@ -65,7 +65,7 @@ abstract class FlutterCacheDBHelper {
         whereArgs: [model.id],
       );
 
-  static Future<int> customUpdate(String table, CacheDBBaseModel model, {String? columnName, String? columnValue}) async => await _db!.update(
+  static Future<int> customUpdate(String table, FlutterCacheDBBaseModel model, {String? columnName, String? columnValue}) async => await _db!.update(
         table,
         model.toMap(),
         where: '$columnName = ?',

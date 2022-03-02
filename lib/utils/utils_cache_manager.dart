@@ -1,6 +1,6 @@
 import 'package:flutter_cache_manager/models/cache_db_model.dart';
 
-import 'cache_db_helper.dart';
+import 'utils_cache_db_helper.dart';
 
 class FlutterCacheManager extends FlutterCacheDBHelper {
   static FlutterCacheManager? _instance;
