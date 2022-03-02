@@ -29,7 +29,7 @@ abstract class FlutterCacheDBHelper {
 
   static void onCreate(Database db, int version) async {
     await db.execute(
-      'CREATE TABLE flutter_cache_data (id INTEGER PRIMARY KEY AUTOINCREMENT, key TEXT, syncData TEXT, syncTime INTEGER)',
+      'CREATE TABLE flutter_cache_data (id INTEGER PRIMARY KEY AUTOINCREMENT, key TEXT, syncData TEXT, syncTime INTEGER, isInvalidated INTEGER)',
     );
   }
 

@@ -6,11 +6,13 @@ class FlutterCacheDBModel extends CacheDBBaseModel {
   String key;
   String syncData;
   int? syncTime;
+  bool isInvalidated;
 
   FlutterCacheDBModel({
     required this.key,
     required this.syncData,
     this.syncTime,
+    this.isInvalidated = false,
   });
 
   static FlutterCacheDBModel fromMap(Map<String, dynamic> map) {
@@ -18,6 +20,7 @@ class FlutterCacheDBModel extends CacheDBBaseModel {
       key: map["key"],
       syncData: map["syncData"].toString(),
       syncTime: map["syncTime"],
+      isInvalidated: map["isInvalidated"] == 1,
     );
   }
 
@@ -29,6 +32,7 @@ class FlutterCacheDBModel extends CacheDBBaseModel {
         'key': key,
         'syncData': syncData,
         'syncTime': syncTime,
+        'isInvalidated': isInvalidated == true ? 1 : 0,
       },
     );
 
