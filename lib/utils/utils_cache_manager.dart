@@ -1,4 +1,4 @@
-import 'package:flutter_cache_manager/models/cache_db_model.dart';
+import 'package:flutter_cache_manager_tg/models/cache_db_model.dart';
 
 import 'utils_cache_db_helper.dart';
 

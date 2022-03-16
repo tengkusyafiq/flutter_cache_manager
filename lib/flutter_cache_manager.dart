@@ -1,4 +1,4 @@
-library flutter_cache_manager;
+library flutter_cache_manager_tg;
 
 export 'utils/utils_cache_manager.dart' show FlutterCacheManager;
 export 'utils/utils_cache_db_helper.dart' hide FlutterCacheDBHelper;

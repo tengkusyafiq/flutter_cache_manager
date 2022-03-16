@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:flutter_cache_manager/models/cache_db_base_model.dart';
+import 'package:flutter_cache_manager_tg/models/cache_db_base_model.dart';
 import 'package:path/path.dart' as p;
 import 'package:sqflite/sqflite.dart';
 
