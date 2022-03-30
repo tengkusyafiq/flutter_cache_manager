@@ -61,6 +61,18 @@ class FlutterCacheManager extends FlutterCacheDBHelper {
     return cacheData.length == 1 ? true : false;
   }
 
+  Future<List<String>> getAllKeysContains(String key) async {
+    await FlutterCacheDBHelper.init();
+
+    List<Map<String, dynamic>> cacheData = await FlutterCacheDBHelper.conditionalQuery(
+      FlutterCacheDBModel.table,
+      "key LIKE ?",
+      '%$key%',
+    );
+
+    return cacheData.map((item) => item["key"] as String).toList();
+  }
+
   Future<void> emptyCache() async {
     await FlutterCacheDBHelper.init();
     FlutterCacheDBHelper.deleteAll(FlutterCacheDBModel.table);
